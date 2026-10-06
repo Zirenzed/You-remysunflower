@@ -165,7 +165,7 @@
       <div class="center">
         <div class="flower-stage">🌱</div>
         <h1 class="title">สวนทานตะวันแห่งใจ</h1>
-        <p class="sub">มีเมล็ดพันธุ์เล็ก ๆ อยากปลูกให้บานเพื่อคนคนเดียว</p>
+        <p class="sub">มีเมล็ดพันธุ์เล็กๆ อยากปลูกให้ฮายคนเดียวครับ 😳</p>
         <button class="btn" id="startBtn">เริ่มปลูกกันเลย 🌻</button>
       </div>
     `));
@@ -175,8 +175,8 @@
   function renderGrow(){
     const wrap = el(`
       <div class="center">
-        <h2 class="title" style="font-size:1.2rem;">รดน้ำให้ทานตะวันโต 💧</h2>
-        <p class="sub">กดรดน้ำให้ครบ <span class="counter">${state.needWaters}</span> ครั้งนะ</p>
+        <h2 class="title" style="font-size:1.2rem;">ช่วยผมรดน้ำให้ทานตะวันโตหน่อยครับ 💧</h2>
+        <p class="sub">กดรดน้ำให้ครบนะครับ <span class="counter">${state.needWaters}</span> ครั้งนะ</p>
         <div class="flower-stage" id="flower">🌱</div>
         <div class="counter" id="cnt">0 / ${state.needWaters}</div>
         <div class="can" id="canBtn">💧</div>
@@ -198,7 +198,7 @@
       if(state.waters >= state.needWaters){
         flower.textContent = '🌻';
         setTimeout(()=>{
-          app.appendChild(el(`<div class="center" style="margin-top:14px;"><p class="sub" style="font-weight:700;color:#e08900">บานสวยสดใสเลย! 🌻✨</p><button class="btn" id="nextBtn">ต่อไป</button></div>`));
+          app.appendChild(el(`<div class="center" style="margin-top:14px;"><p class="sub" style="font-weight:700;color:#e08900">เติบโตแบบสวยสดใสเลย! 🌻✨</p><button class="btn" id="nextBtn">ต่อไป</button></div>`));
           document.getElementById('nextBtn').onclick = ()=>{ state.step=2; render(); };
         }, 400);
       }
@@ -218,19 +218,19 @@
   }
 
   const BEE_MESSAGES = [
-    'เจอแล้ว! ผึ้งตัวนี้บอกว่าคุณน่ารักที่สุดในสวนนี้ 🐝💛',
-    'ผึ้งน้อยกระซิบว่า ขอบคุณที่ตั้งใจหานะ 🌻',
-    'เจอแล้ว! มันแปลกใจจังว่าคุณตาไวมาก 👀✨',
-    'ผึ้งตัวนี้ฝากบอกว่า สวนนี้บานเพื่อคุณคนเดียว 🌼',
-    'เจอแล้ว! ใกล้ครบแล้วนะ อึดใจอีกนิด 💪',
-    'ตัวสุดท้าย! ผึ้งบอกว่าไปดูข้อความลับกันต่อเลย 🐝💌'
+    'ผึ้งตัวนี้บอกว่าคุณน่ารักที่สุดในสวนนี้ 🐝💛',
+    'ผึ้งตัวนี้บอกว่าผมคิดถึงฮายมากๆ 😳🌻',
+    'ตาไวขนาดนี้ มองเห็นผมในสายตาแล้วไหมนะครับ 👀✨',
+    'ผึ้งตัวนี้ฝากบอกว่า สวนนี้ปลูกไว้เพื่อคุณคนเดียว 😳🌼',
+    'เจอแล้ว! ใกล้ครบแล้วนะครับ อดทนอีกนิดนะครับอ้วง 💪',
+    'ตัวสุดท้ายแล้ว! ผึ้งบอกว่าผมชอบอ้วงมากนะครับ 🐝💌'
   ];
 
   function renderHunt(){
     const wrap = el(`
       <div class="center">
         <h2 class="title" style="font-size:1.2rem;">ตามหาผึ้งน้อย 🐝</h2>
-        <p class="sub">ผึ้งตัวจริงซ่อนอยู่ท่ามกลางแมลงหน้าตาคล้ายกัน หาให้ครบ <b>${state.needBees}</b> ตัวนะ</p>
+        <p class="sub">ผึ้งตัวจริงซ่อนอยู่ท่ามกลางแมลงหน้าตาคล้ายกัน หาให้ครบนะครับเบบี๋ 😳<b>${state.needBees}</b> ตัวนะ</p>
         <div class="hunt-box" id="hbox"></div>
         <div class="counter" id="tcnt">พบแล้ว 0 / ${state.needBees}</div>
       </div>
@@ -273,7 +273,7 @@
           setTimeout(()=>{
             showModal('🐝', msg, ()=>{
               if(foundCount >= realN){
-                app.appendChild(el(`<div class="center" style="margin-top:12px;"><p class="sub" style="font-weight:700;color:#e08900">เจอครบแล้ว! เก่งมากกก 🐝🎉</p><button class="btn" id="nextBtn2">ต่อไป</button></div>`));
+                app.appendChild(el(`<div class="center" style="margin-top:12px;"><p class="sub" style="font-weight:700;color:#e08900">เจอครบแล้ว! เก่งมากกกครับเบบี๋ของผม 🐝🎉</p><button class="btn" id="nextBtn2">ต่อไป</button></div>`));
                 document.getElementById('nextBtn2').onclick = ()=>{ state.step=3; render(); };
               }
             });
@@ -291,13 +291,13 @@
       {t:'หันตามคนที่ทำให้วันธรรมดาสดใสขึ้น', v:35},
       {t:'หันตามความรู้สึกของตัวเองก่อน', v:20}
     ]},
-    { q:'ถ้าสวนแห่งนี้แทนใจผม คุณอยากเดินเข้ามาไหม?', opts:[
-      {t:'อยากเดินเข้าไปดูใกล้ ๆ เลย', v:35},
-      {t:'ขอดูจากไกล ๆ ก่อนนะ', v:15}
+    { q:'ถ้าสวนแห่งนี้แทนใจผม คุณอยากเดินเข้ามาชมดูไหม?', opts:[
+      {t:'เดินมาดูใกล้ๆได้เลยครับ 😳', v:35},
+      {t:'อย่าไปอยากดูจากที่ไกลๆเลยครับฮาย', v:15}
     ]},
-    { q:'ทานตะวันดอกนี้ปลูกไว้เพื่อใคร รู้ไหม?', opts:[
-      {t:'เพื่อคนที่อ่านข้อความนี้อยู่นี่แหละ', v:35},
-      {t:'ไม่รู้สิ บอกหน่อยสิ', v:30}
+    { q:'ทานตะวันดอกนี้ปลูกไว้เพื่อใคร รู้ไหมครับ?', opts:[
+      {t:'เพื่อคนที่อ่านข้อความนี้อยู่นี่แหละ 😳', v:35},
+      {t:'เพื่ออ้วงของผมไงครับ 😳', v:30}
     ]}
   ];
 
@@ -340,7 +340,7 @@
   function renderScore(){
     const wrap = el(`
       <div class="center">
-        <h2 class="title" style="font-size:1.2rem;">วัดความบานของสวนตอนนี้</h2>
+        <h2 class="title" style="font-size:1.2rem;">วัดความสวยงามในสวนของเราตอนนี้</h2>
         <div class="flower-stage" id="face" style="font-size:2.4rem;">🌻</div>
         <input type="range" min="0" max="100" value="50" id="slider">
         <p class="score-msg" id="msg">บานอยู่พอดี ๆ</p>
@@ -353,11 +353,11 @@
     const face = wrap.querySelector('#face');
     function upd(v){
       v = Number(v);
-      if(v===0){ msg.textContent='ยังไม่บานเลยหรอครับเนี่ย 😢'; face.textContent='🌱'; }
-      else if(v===100){ msg.textContent='บานเต็มที่จนอยากให้คุณเห็นเดี๋ยวนี้! 🌻💛'; face.textContent='🌻'; }
-      else if(v<40){ msg.textContent='เริ่มแตกใบแล้วนะ'; face.textContent='🌿'; }
-      else if(v<75){ msg.textContent='ค่อย ๆ บานขึ้นเรื่อย ๆ'; face.textContent='🌼'; }
-      else { msg.textContent='บานสวยมากแล้วนะเนี่ย!'; face.textContent='🌻'; }
+      if(v===0){ msg.textContent='ยังเป็นต้นเล็กๆอยู่เลยนะครับ 😢'; face.textContent='🌱'; }
+      else if(v===100){ msg.textContent='ดอกไม้ในสวนออกดอกเต็มที่แล้ว เราอยู่ด้วยกันไปนานๆนะครับ 😳'; face.textContent='🌻'; }
+      else if(v<40){ msg.textContent='เริ่มแตกใบแล้วนะครับเนี่ย'; face.textContent='🌿'; }
+      else if(v<75){ msg.textContent='ค่อยๆเติบโตขึ้นเรื่อยๆ เหมือนความสัมพันธ์ของเราสองคนเลยครับ 😳'; face.textContent='🌼'; }
+      else { msg.textContent='ความสัมพันธ์ของเราเริ่มเติบโตแล้วนะครับ 🌻💛'; face.textContent='🌻'; }
       state.score = v;
     }
     slider.oninput = (e)=>upd(e.target.value);
@@ -416,10 +416,10 @@
       <div class="center">
         <h2 class="title" style="font-size:1.2rem;">ข้อความลับใต้ดอกทานตะวัน 🌻💌</h2>
         <div class="scratch-wrap">
-          <div class="scratch-under" id="under">ทานตะวันหันตามแสงได้แค่ตอนกลางวัน<br>แต่ใจผมหันตามคุณได้ทุกเวลาเลย<br>เป็นแฟนกับผมได้ไหมครับ 🥺🌻💛</div>
+          <div class="scratch-under" id="under">คุณต้องคู่กับผมดิ<br>จะให้คุณไปเป็นของคนอื่นผมไม่ยอมหรอกนะครับ<br>คุณ = ของผมครับ 🌻💛</div>
           <canvas id="scratch" width="280" height="160" style="position:absolute; inset:0;"></canvas>
         </div>
-        <p class="sub" id="afterMsg" style="display:none; font-weight:700; color:#e08900;">ขูดเสร็จแล้วใช่ไหม... ให้สวนนี้บานเพื่อเราสองคนนะครับ 🥹</p>
+        <p class="sub" id="afterMsg" style="display:none; font-weight:700; color:#e08900;">จริงๆมีความลับอีกข้อซ่อนอยู่ครับเบบี๋ 🥺</p>
         <button class="btn hide" id="toEndBtn">ไปต่อ</button>
       </div>
     `);
@@ -435,8 +435,32 @@
     toEndBtn.onclick = ()=>{ state.step=6; render(); };
   }
 
+  function renderFinal2(){
+    const wrap = el(`
+      <div class="center">
+        <h2 class="title" style="font-size:1.2rem;">ข้อความลับอีกข้อใต้ดอกทานตะวันครับ 🌻💌</h2>
+        <div class="scratch-wrap">
+          <div class="scratch-under" id="under">ไม่อยากให้คุณไปหวั่นไหวกับใครอื่น<br>ใจผมของผมเป็นของคุณแล้วนะครับ<br>ยกใจของคุณให้ผมนะครับ 🥺🌻💛</div>
+          <canvas id="scratch" width="280" height="160" style="position:absolute; inset:0;"></canvas>
+        </div>
+        <p class="sub" id="afterMsg" style="display:none; font-weight:700; color:#e08900;">ขอบคุณที่ทำให้ดอกไม้บานเพื่อเราสองคนนะครับ 🥹🌻💛</p>
+        <button class="btn hide" id="toEndBtn">ไปต่อ</button>
+      </div>
+    `);
+    app.appendChild(wrap);
+    const canvas = wrap.querySelector('#scratch');
+    const under = wrap.querySelector('#under');
+    const afterMsg = wrap.querySelector('#afterMsg');
+    const toEndBtn = wrap.querySelector('#toEndBtn');
+    setupScratch(canvas, under, ()=>{
+      afterMsg.style.display='block';
+      toEndBtn.classList.remove('hide');
+    }, 0.8);
+    toEndBtn.onclick = ()=>{ state.step=7; render(); };
+  }
+
   function makeDodger(btn){
-    const taunts = ['ไม่เอานะ 😤','จับผมไม่ได้หรอก','เปลี่ยนใจเถอะน่า 🥺','กดอันข้าง ๆ ดีกว่า 😏','ฮ่า ๆ ไม่ทันหรอก'];
+    const taunts = ['ไม่เอานะ 😤','จับผมไม่ได้หรอก','เปลี่ยนใจเถอะน่า 🥺','กดอันข้าง ๆ ดีกว่า 😏','ฮ่า ๆ ไม่ทันหรอก', 'ไม่', 'ไม่จริงอ่ะ', 'ผมไม่เชื่อ', 'จะทำอะไรอ่ะ', 'บอกแล้วว่าเร็วกว่าจริงๆ', 'ลองอีกทีสิ', 'ยังไม่ยอมแพ้อีกหรอ', 'ยอมเถอะ', 'ยอมเถอะนะครับ', 'น่านะ', 'นะครับๆๆๆ', 'ยอมละหรอ', 'เก่งมากครับ', 'ยอมก็ดีครับ', 'ยอมเป็นคนของผมละกัน 🤭'];
     let ti = 0;
     function teleport(){
       const w = btn.offsetWidth, h = btn.offsetHeight;
@@ -461,9 +485,9 @@
         <div class="flower-stage">🌻</div>
         <h2 class="title" style="font-size:1.25rem;">แล้วคุณล่ะ ชอบผมไหม?</h2>
         <div class="finale-row">
-          <a class="btn" id="yesBtn" style="text-decoration:none;">ชอบค่ะ/ครับ 💛</a>
+          <a class="btn" id="yesBtn" style="text-decoration:none;">ชอบเถอะนะครับ 😳💛</a>
           <div class="dodge-wrap" style="position:relative;">
-            <button class="btn ghost" id="noBtn" style="position:fixed;">ไม่ชอบ</button>
+            <button class="btn ghost" id="noBtn" style="position:fixed;">ขอคิดดูก่อน 🌻</button>
           </div>
         </div>
       </div>
@@ -471,7 +495,7 @@
     app.appendChild(wrap);
     const noBtn = wrap.querySelector('#noBtn');
     makeDodger(noBtn);
-    wrap.querySelector('#yesBtn').onclick = ()=>{ state.step=7; render(); confettiBurst(); };
+    wrap.querySelector('#yesBtn').onclick = ()=>{ state.step=8; render(); confettiBurst(); };
   }
 
   function renderDone(){
@@ -479,13 +503,13 @@
       <div class="center">
         <div class="flower-stage" style="font-size:5rem;">🌻💛</div>
         <h1 class="title">ดีใจที่สุดเลยครับ!</h1>
-        <p class="sub">ขอบคุณที่เล่นจนจบนะครับ สวนทานตะวันนี้ขอให้บานเพื่อคุณคนเดียวตลอดไป 🌻💕</p>
+        <p class="sub">ขอบคุณที่เล่นจนจบนะครับ สวนทานตะวันสวนนี้เป็นของคุณคนเดียวนะครับ 🌻💕</p>
       </div>
     `));
     confettiBurst();
   }
 
-  const STEPS = [renderIntro, renderGrow, renderHunt, renderQuiz, renderScore, renderFinal, renderEnd, renderDone];
+  const STEPS = [renderIntro, renderGrow, renderHunt, renderQuiz, renderScore, renderFinal, renderFinal2, renderEnd, renderDone];
   render();
 })();
 </script>
